@@ -1,0 +1,570 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+:root {
+    --rosa: #e98aa5;
+    --rosa-claro: #fff0f4;
+    --rosa-escuro: #a84d70;
+    --verde: #68a77c;
+    --texto: #68465a;
+    --fundo: #fff8f2;
+    --cartao: rgba(255, 255, 255, 0.85);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--fundo);
+    color: var(--texto);
+    min-height: 100vh;
+    overflow-x: hidden;
+    transition: background 0.6s, color 0.6s;
+}
+
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+}
+
+.ceu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 460px;
+    background: linear-gradient(
+        180deg,
+        #bde8ff 0%,
+        #e3f5ff 60%,
+        #fff8f2 100%
+    );
+    z-index: -1;
+    overflow: hidden;
+    transition: background 0.8s;
+}
+
+.sol {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: #ffe28a;
+    top: 70px;
+    right: 15%;
+    box-shadow: 0 0 50px #ffe28a;
+    transition: 0.8s;
+}
+
+.lua {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    background: #fff4cc;
+    border-radius: 50%;
+    top: 70px;
+    right: 15%;
+    box-shadow: 0 0 30px #fff4cc;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: 0.8s;
+}
+
+.nuvem {
+    position: absolute;
+    width: 150px;
+    height: 45px;
+    background: white;
+    border-radius: 50px;
+    opacity: 0.8;
+    animation: flutuar 8s ease-in-out infinite alternate;
+}
+
+.nuvem::before,
+.nuvem::after {
+    content: "";
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+}
+
+.nuvem::before {
+    width: 70px;
+    height: 70px;
+    top: -35px;
+    left: 25px;
+}
+
+.nuvem::after {
+    width: 85px;
+    height: 85px;
+    top: -45px;
+    right: 20px;
+}
+
+.nuvem1 {
+    top: 120px;
+    left: 10%;
+}
+
+.nuvem2 {
+    top: 210px;
+    right: 10%;
+    transform: scale(0.7);
+    animation-delay: 2s;
+}
+
+@keyframes flutuar {
+    from {
+        translate: -20px 0;
+    }
+
+    to {
+        translate: 30px 0;
+    }
+}
+
+/* CABEÇALHO */
+
+header {
+    text-align: center;
+    padding: 90px 20px 55px;
+}
+
+header h1 {
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    color: var(--rosa-escuro);
+    margin-bottom: 15px;
+}
+
+header p {
+    font-size: 1.05rem;
+    margin-bottom: 25px;
+}
+
+#alternarTema {
+    padding: 12px 25px;
+    border-radius: 30px;
+    background: white;
+    color: var(--rosa-escuro);
+    box-shadow: 0 5px 20px #00000012;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+#alternarTema:hover {
+    transform: translateY(-3px);
+}
+
+/* CONTEÚDO */
+
+main {
+    width: min(1100px, 92%);
+    margin: auto;
+}
+
+.introducao {
+    background: var(--cartao);
+    padding: 35px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 10px 35px #00000008;
+    backdrop-filter: blur(10px);
+}
+
+.introducao h2 {
+    font-size: 2rem;
+    color: var(--rosa-escuro);
+    margin-bottom: 15px;
+}
+
+.introducao p {
+    line-height: 1.8;
+    max-width: 650px;
+    margin: auto;
+}
+
+/* ESTATÍSTICAS */
+
+.painel {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 35px 0;
+}
+
+.estatistica {
+    background: var(--cartao);
+    padding: 22px 35px;
+    border-radius: 20px;
+    text-align: center;
+    min-width: 180px;
+    box-shadow: 0 8px 25px #00000008;
+}
+
+.estatistica span {
+    display: block;
+    font-size: 2rem;
+}
+
+.estatistica strong {
+    display: block;
+    font-size: 2rem;
+    color: var(--rosa-escuro);
+    margin: 5px 0;
+}
+
+.estatistica p {
+    font-size: 0.85rem;
+}
+
+/* JARDIM */
+
+.jardim-container {
+    text-align: center;
+    padding: 45px 20px;
+    background: #e8f4df;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    border: 5px solid white;
+    box-shadow: 0 15px 40px #00000010;
+}
+
+.jardim-container h2 {
+    font-size: 2.2rem;
+    color: #588663;
+    margin-bottom: 10px;
+}
+
+.jardim-container > p {
+    margin-bottom: 45px;
+}
+
+.jardim {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 35px 15px;
+    max-width: 850px;
+    margin: auto;
+    padding: 30px 0;
+}
+
+.espaco-planta {
+    height: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.espaco-planta:hover {
+    transform: translateY(-8px);
+}
+
+.planta {
+    font-size: 65px;
+    height: 100px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    transform-origin: bottom;
+    animation: crescer 0.5s ease;
+    user-select: none;
+}
+
+@keyframes crescer {
+    from {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.planta.flor {
+    animation: crescer 0.6s ease, balancar 3s ease-in-out infinite;
+}
+
+@keyframes balancar {
+    0%, 100% {
+        transform: rotate(-5deg);
+    }
+
+    50% {
+        transform: rotate(5deg);
+    }
+}
+
+.vaso {
+    width: 95px;
+    height: 65px;
+    background: linear-gradient(90deg, #d98c69, #b76b4e);
+    border-radius: 5px 5px 22px 22px;
+    position: relative;
+    box-shadow: inset -10px 0 #00000010;
+}
+
+.vaso::before {
+    content: "";
+    position: absolute;
+    width: 110px;
+    height: 16px;
+    background: #d98c69;
+    top: -5px;
+    left: -7px;
+    border-radius: 5px;
+}
+
+.numero-vaso {
+    position: absolute;
+    bottom: 15px;
+    color: white;
+    font-weight: bold;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.espaco-planta:focus-visible {
+    outline: 3px solid var(--rosa-escuro);
+    outline-offset: 5px;
+    border-radius: 12px;
+}
+
+/* OUTRAS SEÇÕES */
+
+.instrucoes,
+.mensagem-final {
+    text-align: center;
+    padding: 55px 25px;
+}
+
+.instrucoes h2,
+.mensagem-final h2 {
+    color: var(--rosa-escuro);
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.instrucoes p,
+.mensagem-final p {
+    max-width: 650px;
+    margin: auto;
+    line-height: 1.9;
+}
+
+.mensagem-final {
+    margin-bottom: 60px;
+    background: var(--rosa-claro);
+    border-radius: 25px;
+}
+
+/* MODAL */
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: #00000085;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    padding: 20px;
+}
+
+.modal.ativo {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-conteudo {
+    background: white;
+    padding: 45px 30px;
+    border-radius: 25px;
+    text-align: center;
+    max-width: 440px;
+    width: 100%;
+    position: relative;
+    transform: scale(0.8);
+    transition: 0.3s;
+}
+
+.modal.ativo .modal-conteudo {
+    transform: scale(1);
+}
+
+.fechar {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    background: none;
+    color: #888;
+}
+
+.modal-flor {
+    font-size: 85px;
+    margin-bottom: 20px;
+    animation: balancar 3s infinite;
+}
+
+.modal-conteudo h2 {
+    color: var(--rosa-escuro);
+    margin-bottom: 20px;
+}
+
+.modal-conteudo p {
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.botao-modal {
+    background: var(--rosa);
+    color: white;
+    padding: 13px 25px;
+    border-radius: 30px;
+    font-weight: 600;
+}
+
+.botao-modal:hover {
+    background: var(--rosa-escuro);
+}
+
+/* NOTIFICAÇÕES */
+
+.notificacao {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translate(-50%, 100px);
+    background: #a84d70;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 30px;
+    z-index: 200;
+    opacity: 0;
+    transition: 0.4s;
+    text-align: center;
+    width: max-content;
+    max-width: 90%;
+    pointer-events: none;
+}
+
+.notificacao.visivel {
+    transform: translate(-50%, 0);
+    opacity: 1;
+}
+
+/* MODO NOITE */
+
+body.noite {
+    --fundo: #171a30;
+    --texto: #e5dce9;
+    --cartao: rgba(255, 255, 255, 0.08);
+    --rosa-claro: #30243e;
+}
+
+body.noite .ceu {
+    background: linear-gradient(
+        180deg,
+        #10152e,
+        #303456 70%,
+        #171a30
+    );
+}
+
+body.noite .sol {
+    opacity: 0;
+    transform: translateY(100px);
+}
+
+body.noite .lua {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+body.noite .nuvem {
+    opacity: 0.1;
+}
+
+body.noite .jardim-container {
+    background: #263b35;
+    border-color: #38483e;
+}
+
+body.noite .jardim-container h2 {
+    color: #a5d5ad;
+}
+
+body.noite header h1,
+body.noite .introducao h2,
+body.noite .estatistica strong,
+body.noite .instrucoes h2,
+body.noite .mensagem-final h2 {
+    color: #f3a9c3;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 700px) {
+    header {
+        padding-top: 80px;
+    }
+
+    .jardim {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px 10px;
+    }
+
+    .painel {
+        gap: 10px;
+    }
+
+    .estatistica {
+        min-width: 0;
+        flex: 1;
+        padding: 20px 10px;
+    }
+
+    .jardim-container {
+        padding: 35px 10px;
+    }
+
+    .jardim-container h2 {
+        font-size: 1.7rem;
+    }
+
+    .introducao {
+        padding: 30px 20px;
+    }
+
+    .planta {
+        font-size: 55px;
+    }
+
+    .vaso {
+        width: 80px;
+        height: 60px;
+    }
+
+    .vaso::before {
+        width: 95px;
+    }
+}

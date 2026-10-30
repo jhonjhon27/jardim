@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosso Jardim do Amor 🌷</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="ceu">
+        <div class="sol"></div>
+        <div class="lua"></div>
+        <div class="nuvem nuvem1"></div>
+        <div class="nuvem nuvem2"></div>
+        <div class="estrelas"></div>
+    </div>
+
+    <header>
+        <h1>🌷 Nosso Jardim do Amor</h1>
+        <p>Um pequeno lugar onde nosso amor floresce todos os dias.</p>
+
+        <button id="alternarTema">🌙 Modo noite</button>
+    </header>
+
+    <main>
+        <section class="introducao">
+            <h2>Bem-vinda ao nosso jardim! 💕</h2>
+            <p>
+                Cada flor guarda um pedacinho do meu amor por você.
+                Plante, cuide e descubra as surpresas que preparei.
+            </p>
+        </section>
+
+        <section class="painel">
+            <div class="estatistica">
+                <span>🌱</span>
+                <strong id="totalPlantadas">0</strong>
+                <p>Flores plantadas</p>
+            </div>
+
+            <div class="estatistica">
+                <span>🌸</span>
+                <strong id="totalFlorescidas">0</strong>
+                <p>Flores que cresceram</p>
+            </div>
+        </section>
+
+        <section class="jardim-container">
+            <h2>Seu jardim encantado 🌼</h2>
+            <p>Clique em um vaso para plantar ou regar uma flor.</p>
+
+            <div class="jardim" id="jardim"></div>
+        </section>
+
+        <section class="instrucoes">
+            <h2>Como cuidar do jardim? 🌿</h2>
+            <p>
+                Clique em um vaso vazio para plantar uma semente.
+                Depois, clique novamente para regá-la.
+                Continue cuidando até ela florescer!
+            </p>
+        </section>
+
+        <section class="mensagem-final">
+            <h2>💗 Uma mensagem para você</h2>
+            <p>
+                Assim como essas flores, quero que nosso amor
+                continue crescendo, ficando mais bonito
+                e florescendo a cada novo dia.
+            </p>
+        </section>
+    </main>
+
+    <div class="modal" id="modal">
+        <div class="modal-conteudo">
+            <button class="fechar" id="fecharModal">×</button>
+
+            <div class="modal-flor" id="modalFlor">🌷</div>
+
+            <h2>Uma flor para você! 💕</h2>
+
+            <p id="mensagemFlor"></p>
+
+            <button class="botao-modal" id="botaoModal">
+                Guardar com carinho ❤️
+            </button>
+        </div>
+    </div>
+
+    <div class="notificacao" id="notificacao"></div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
