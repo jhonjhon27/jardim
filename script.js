@@ -31,19 +31,20 @@ const flores = [
 // PERSONALIZE ESTAS MENSAGENS
 
 const mensagens = [
-    "Você é a pessoa que transforma meus dias comuns em momentos especiais. ❤️",
 
-    "Se eu pudesse escolher novamente, escolheria você em todas as vezes. 💕",
+    "Desde o dia em que eu te conheci, você deixa o meu mundo mais colorido. ❤️",
 
-    "Seu sorriso é uma das coisas mais bonitas que existem no meu mundo. 🌷",
+    "Você mudou a minha vida para melhor. Se eu pudesse escolher novamente, escolheria você todas as vezes. 💕",
 
-    "Obrigado por fazer parte da minha vida e deixar tudo mais bonito. 💗",
+    "Seu sorriso me encanta, seu sorriso me faz sorrir. Seu sorriso é uma das suas características mais bonitas. Eu me apaixono toda vez que o vejo. 🌷",
 
-    "Quero continuar construindo lembranças incríveis ao seu lado. 🌸",
+    "Você é minha pessoa favorita. Com você, eu me sinto confortável para conversar e falar qualquer coisa, porque sei que você vai me ouvir com atenção. Além disso, você me faz sentir seguro. 💗",
 
-    "Cada momento com você se torna uma lembrança que quero guardar para sempre. 💖",
+    "Quero continuar namorando com você e, depois, me casar e viver com você pelo resto da minha vida, construindo lembranças, conquistando e realizando todos os nossos objetivos. 🌸",
 
-    "Você é minha pessoa favorita para compartilhar as pequenas coisas da vida. 🌻",
+    "Cada momento ao seu lado é um momento que quero guardar para sempre. 💖",
+
+    "Eu quero sua presença todos os dias. Mesmo que seja à distância, eu te quero comigo, porque você me faz muito bem. Você melhora todos os meus dias. Não importa o quanto meu dia tenha sido ruim, você sempre melhora ele. 🌻",
 
     "Assim como este jardim, espero que nosso amor continue florescendo. ❤️"
 ];
