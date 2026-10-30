@@ -396,6 +396,7 @@ main {
 
 .modal-conteudo {
     background: white;
+    color: #68465a;
     padding: 45px 30px;
     border-radius: 25px;
     text-align: center;
@@ -567,4 +568,4 @@ body.noite .mensagem-final h2 {
     .vaso::before {
         width: 95px;
     }
-}
+    }
